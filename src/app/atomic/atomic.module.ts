@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { ButtonAtomComponent } from './atoms/button/button.component';
 import { InputAtomComponent } from './atoms/input/input.component';
@@ -19,7 +16,10 @@ import { AuthTemplateComponent } from './templates/auth-template/auth-template.c
     LoginFormOrganismComponent,
     AuthTemplateComponent
   ],
-  imports: [CommonModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatFormFieldModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule
+  ],
   exports: [
     ButtonAtomComponent,
     InputAtomComponent,
