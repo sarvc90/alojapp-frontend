@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body { height: 100%; }
+body { font-family: Roboto, Arial, sans-serif; background: #f3f7f7; }
+
+/* Pixel-perfect mockup styles placeholder */
+.body{margin:0;}
+
+/* Improved pixel styles */
+:root {
+  --primary:#2f6f73;
+  --text:#053b3f;
+}
+h1 {color:var(--primary);}
+button {background:var(--primary); color:white;}

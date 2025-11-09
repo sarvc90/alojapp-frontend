@@ -1,0 +1,1 @@
+Put your logo image as src/assets/logo.png to show in the template.
