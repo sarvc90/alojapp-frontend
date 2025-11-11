@@ -6,6 +6,7 @@ import { ButtonAtomComponent } from './atoms/button/button.component';
 import { InputAtomComponent } from './atoms/input/input.component';
 import { FormFieldMoleculeComponent } from './molecules/form-field/form-field.component';
 import { LoginFormOrganismComponent } from './organisms/login-form/login-form.component';
+import { RegisterFormOrganismComponent } from './organisms/register-form/register-form.component';
 import { AuthTemplateComponent } from './templates/auth-template/auth-template.component';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AuthTemplateComponent } from './templates/auth-template/auth-template.c
     InputAtomComponent,
     FormFieldMoleculeComponent,
     LoginFormOrganismComponent,
+    RegisterFormOrganismComponent,
     AuthTemplateComponent
   ],
   imports: [
@@ -25,6 +27,7 @@ import { AuthTemplateComponent } from './templates/auth-template/auth-template.c
     InputAtomComponent,
     FormFieldMoleculeComponent,
     LoginFormOrganismComponent,
+    RegisterFormOrganismComponent,
     AuthTemplateComponent
   ]
 })
