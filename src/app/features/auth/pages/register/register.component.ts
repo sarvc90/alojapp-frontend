@@ -6,27 +6,27 @@ import { AuthService } from 'src/app/core/services/auth.service';
 @Component({
     selector: 'app-register-page',
     template: `
-    <app-auth-template 
-      title="Crea tu cuenta" 
-      subtitle="Únete a nuestra comunidad de alojamientos">
-      
-      <div *ngIf="successMessage" 
-           class="mb-4 p-4 bg-green-50 border border-green-200 rounded-md">
-        <p class="text-green-700 text-sm">{{ successMessage }}</p>
-      </div>
+        <app-auth-template
+                title="Crea tu cuenta"
+                subtitle="Únete a nuestra comunidad de alojamientos">
 
-      <div *ngIf="errorMessage" 
-           class="mb-4 p-4 bg-red-50 border border-red-200 rounded-md">
-        <p class="text-red-700 text-sm">{{ errorMessage }}</p>
-      </div>
+            <div *ngIf="successMessage"
+                 class="mb-4 p-4 bg-green-50 border border-green-200 rounded-md">
+                <p class="text-green-700 text-sm">{{ successMessage }}</p>
+            </div>
 
-      <app-organism-register-form 
-        [form]="form" 
-        (submitForm)="onSubmit()" 
-        (goToLogin)="navigateToLogin()">
-      </app-organism-register-form>
-    </app-auth-template>
-  `
+            <div *ngIf="errorMessage"
+                 class="mb-4 p-4 bg-red-50 border border-red-200 rounded-md">
+                <p class="text-red-700 text-sm">{{ errorMessage }}</p>
+            </div>
+
+            <app-organism-register-form
+                    [form]="form"
+                    (submitForm)="onSubmit()"
+                    (goToLogin)="navigateToLogin()">
+            </app-organism-register-form>
+        </app-auth-template>
+    `
 })
 export class RegisterPageComponent {
     form: FormGroup;

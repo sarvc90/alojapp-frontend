@@ -19,6 +19,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
+  // 🔹 Login
   login(data: { email: string; password: string }): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${this.base}/login`, data).pipe(
         tap(res => {
@@ -33,24 +34,28 @@ export class AuthService {
     );
   }
 
+  // 🔹 Registro de huésped
+  registroHuesped(data: any): Observable<any> {
+    return this.http.post(`${this.base}/registro-huesped`, data);
+  }
+
+  // 🔹 Registro de anfitrión
+  registroAnfitrion(data: any): Observable<any> {
+    return this.http.post(`${this.base}/registro-anfitrion`, data);
+  }
+
+  // 🔹 Utilidades
   logout() { localStorage.clear(); }
   getToken() { return localStorage.getItem('token'); }
   isLoggedIn() { return !!this.getToken(); }
   getRoles(): string[] { return JSON.parse(localStorage.getItem('roles') || '[]'); }
+
   getUsuarioId(): number | null {
     const id = localStorage.getItem('usuarioId');
     return id ? parseInt(id) : null;
   }
 
-  getNombre(): string | null {
-    return localStorage.getItem('nombre');
-  }
-
-  getEmail(): string | null {
-    return localStorage.getItem('email');
-  }
-
-  getRol(): string | null {
-    return localStorage.getItem('rol');
-  }
+  getNombre(): string | null { return localStorage.getItem('nombre'); }
+  getEmail(): string | null { return localStorage.getItem('email'); }
+  getRol(): string | null { return localStorage.getItem('rol'); }
 }
